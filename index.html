@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>renenet | digital studio</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Onest:wght@700;800&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
   <style>
@@ -129,6 +133,64 @@
       font-size: 14px;
       color: var(--secondary);
       line-height: 1.55;
+    }
+
+    /* ── Projects ── */
+    .project-cards {
+      display: grid;
+      gap: 16px;
+    }
+
+    .project-card {
+      display: block;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.15s;
+    }
+
+    .project-card:hover {
+      border-color: var(--accent);
+    }
+
+    .project-name {
+      font-weight: 500;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .project-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .project-tag {
+      font-size: 11px;
+      letter-spacing: 0.03em;
+      color: var(--secondary);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 3px 10px;
+    }
+
+    .project-desc {
+      font-size: 14px;
+      color: var(--secondary);
+      line-height: 1.55;
+      margin-bottom: 10px;
+    }
+
+    .project-status {
+      display: inline-flex;
+      align-items: center;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--secondary);
     }
 
     /* ── How we work ── */
@@ -314,6 +376,26 @@
           How to price and not lose money on paid traffic.
           </p>
       </div>
+
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section>
+    <p class="label">
+      Projects
+      </p>
+    <div class="project-cards">
+
+      <a class="project-card" href="combo-kitchen.html">
+        <p class="project-name">Combo Kitchen</p>
+        <div class="project-tags">
+          <span class="project-tag">Mobile app</span>
+          <span class="project-tag">In-house</span>
+        </div>
+        <p class="project-desc">A companion app for character rosters, move lists, and combos across six fighting games. Currently in beta testing on Google Play.</p>
+        <span class="project-status"><span class="dot"></span>In beta</span>
+      </a>
 
     </div>
   </section>
