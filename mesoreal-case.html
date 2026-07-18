@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Combo Kitchen | renenet</title>
+  <title>Mesoreal Blog Redesign | renenet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700&family=Onest:wght@700;800&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
   <style>
@@ -121,16 +121,6 @@
       margin-right: 8px;
     }
 
-    .play-badge {
-      display: inline-block;
-      margin-top: 28px;
-    }
-
-    .play-badge img {
-      height: 46px;
-      display: block;
-    }
-
     /* ── Sections ── */
     section {
       padding: 56px 0;
@@ -156,6 +146,29 @@
       margin-top: 18px;
     }
 
+    /* ── Before / after ── */
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 36px;
+    }
+
+    .compare-item img {
+      display: block;
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+
+    .compare-tag {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+
     /* ── Features ── */
     .features {
       display: grid;
@@ -172,15 +185,6 @@
       font-size: 14px;
       color: var(--secondary);
       line-height: 1.55;
-    }
-
-    /* ── Disclaimer ── */
-    .disclaimer {
-      font-size: 12px;
-      color: var(--secondary);
-      line-height: 1.6;
-      max-width: 560px;
-      margin-bottom: 16px;
     }
 
     /* ── Facts ── */
@@ -253,6 +257,7 @@
       .body-text { font-size: 16px; }
       .fact { flex-direction: column; align-items: flex-start; gap: 4px; }
       .fact-value { text-align: left; }
+      .compare { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -270,16 +275,12 @@
   <div class="hero">
     <p class="hero-eyebrow">case study</p>
     <h1 class="hero-title">
-      Combo Kitchen
+      Rebuilding Mesoreal's blog
       </h1>
     <p class="hero-sub">
-      A companion app for looking up character rosters, move lists, and combos across six fighting games, designed and built end-to-end by renenet.
+      Mesoreal is a B2B cosmetology distributor. We rewrote how its blog reads and how its team publishes — content structure, front-end framework, and the CMS behind it.
       </p>
-    <span class="status-badge"><span class="status-dot"></span>Beta testing on Google Play</span>
-    <br>
-    <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.makstopy.fightingguide" target="_blank" rel="noopener">
-      <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
-    </a>
+    <span class="status-badge"><span class="status-dot"></span>Live on mesoreal.ru</span>
   </div>
 
   <!-- Overview -->
@@ -287,45 +288,83 @@
     <p class="label">
       Overview
       </p>
-    <p class="body-text">Combo Kitchen covers Mortal Kombat 1, Street Fighter 6, Tekken 8, Guilty Gear Strive, Dragon Ball FighterZ, and Fatal Fury: City of the Wolves. Each game ships with a full character roster, move lists, and combo lists, so players can look up a character's kit or a specific combo without digging through a wiki or scrubbing through video guides.</p>
-    <p class="body-text">It's built for players learning a new character, switching between multiple fighting games, drilling combo routes, or who just want a fast reference between matches or practice sessions. We developed the app from the ground up — product design, development, and QA. It's currently in beta testing on Google Play, with public release to follow.</p>
+    <p class="body-text">Mesoreal's blog carried real expertise — articles written by the brand's own cosmetologist — but the format buried it. Long unbroken paragraphs, no way to jump to a relevant section, no sourcing behind the claims, and an editing workflow that forced every article through a single freeform HTML box. We took on both sides of the problem: how an article reads, and how it gets published.</p>
     </section>
 
-  <!-- Features -->
+  <!-- Before/after -->
   <section>
     <p class="label">
-      Features
+      Before / after
+      </p>
+    <p class="body-text">Same article, same author. The old version is a single wall of text with a manufacturer ranking and no citations. The new version opens with a table of contents, a disclaimer, and reorganizes the advice around how a reader actually decides — by age, by zone, by ingredient — backed by numbered sources.</p>
+    <div class="compare">
+      <div class="compare-item">
+        <p class="compare-tag">Before</p>
+        <img src="mesoreal-before.png" alt="Mesoreal blog article before redesign">
+      </div>
+      <div class="compare-item">
+        <p class="compare-tag">After</p>
+        <img src="mesoreal-after.png" alt="Mesoreal blog article after redesign">
+      </div>
+    </div>
+  </section>
+
+  <!-- Content redesign -->
+  <section>
+    <p class="label">
+      Content & visual redesign
       </p>
     <div class="features">
 
       <div>
-        <p class="feature-name">Rosters, moves, and combos</p>
-        <p class="feature-desc">Full character rosters for six fighting games, with move and combo data for each character.</p>
+        <p class="feature-name">Navigable structure</p>
+        <p class="feature-desc">Added a table-of-contents sidebar and real heading hierarchy, so a reader can jump straight to the section that answers their question instead of scrolling a single block of text.</p>
       </div>
 
       <div>
-        <p class="feature-name">Combo lists</p>
-        <p class="feature-desc">Organized by character, from basic bread-and-butter combos to more advanced routes.</p>
+        <p class="feature-name">Reasoning over ranking</p>
+        <p class="feature-desc">Replaced the generic "best products" list with advice organized by the variables that actually drive a recommendation — patient age, treatment zone, active ingredient — plus a custom visual summary card for quick reference.</p>
       </div>
 
       <div>
-        <p class="feature-name">Custom combo builder</p>
-        <p class="feature-desc">Put together and save your own combo sequences for practice or reference.</p>
+        <p class="feature-name">Cited sources</p>
+        <p class="feature-desc">Claims about ingredients and results are now backed by numbered references linking to the actual studies, instead of stated as unsupported fact.</p>
       </div>
 
       <div>
-        <p class="feature-name">Favorites</p>
-        <p class="feature-desc">Save the characters and combos you use most for quick access.</p>
+        <p class="feature-name">Scoped typography</p>
+        <p class="feature-desc">Gave the blog its own type and color system inside <code>.post-content</code>, without touching the site-wide UI everywhere else.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Admin & CMS -->
+  <section>
+    <p class="label">
+      Admin & CMS
+      </p>
+    <p class="body-text">The visual redesign only holds up if the editing team can actually produce it article after article. So we rebuilt the publishing pipeline behind the blog alongside the front end.</p>
+    <div class="features" style="margin-top: 32px;">
+
+      <div>
+        <p class="feature-name">Bootstrap 3 → 5</p>
+        <p class="feature-desc">Migrated the site's front-end framework, updating deprecated markup along the way — the video embed block and the news carousel's data attributes both needed rework to match Bootstrap 5's conventions.</p>
       </div>
 
       <div>
-        <p class="feature-name">Works offline</p>
-        <p class="feature-desc">Combo and roster data is stored on your device, so you can check a combo list without a connection.</p>
+        <p class="feature-name">Structured content model, not a text box</p>
+        <p class="feature-desc">Replaced the Summernote WYSIWYG editor with a <code>ContentBlock</code> model — text, image, video, and callout blocks, with rich text (including tables) authored in CKEditor5. Editors now compose posts from reusable blocks instead of pasting raw HTML, which cuts down on formatting bugs and keeps the content structured enough to reuse later.</p>
       </div>
 
       <div>
-        <p class="feature-name">Built for quick lookups</p>
-        <p class="feature-desc">A clean, dark-themed interface designed for use between matches or practice sessions.</p>
+        <p class="feature-name">CDN for media</p>
+        <p class="feature-desc">Connected blog media to a CDN, provisioned separately from object storage, for faster asset delivery without changing how editors upload images.</p>
+      </div>
+
+      <div>
+        <p class="feature-name">Google Docs → draft, automatically</p>
+        <p class="feature-desc">Built a script that pulls an article straight from a Google Doc and creates a draft post in the admin panel — removing the manual copy-paste step, and the formatting loss that came with it, between the writer's document and the CMS.</p>
       </div>
 
     </div>
@@ -339,28 +378,23 @@
     <div class="facts">
 
       <div class="fact">
-        <span class="fact-label">Platform</span>
-        <span class="fact-value">Android (Google Play)</span>
+        <span class="fact-label">Client</span>
+        <span class="fact-value">Mesoreal — B2B cosmetology distributor</span>
         </div>
 
       <div class="fact">
-        <span class="fact-label">Status</span>
-        <span class="fact-value">Beta testing</span>
+        <span class="fact-label">Stack</span>
+        <span class="fact-value">Django · PostgreSQL · self-hosted on k3s</span>
         </div>
 
       <div class="fact">
         <span class="fact-label">Scope</span>
-        <span class="fact-value">Design · Development · QA</span>
+        <span class="fact-value">Editorial redesign · Front-end migration · CMS rebuild</span>
         </div>
 
       <div class="fact">
-        <span class="fact-label">Games covered</span>
-        <span class="fact-value">MK1 · SF6 · Tekken 8 · GG Strive · DBFZ · Fatal Fury: COTW</span>
-        </div>
-
-      <div class="fact">
-        <span class="fact-label">Privacy policy</span>
-        <span class="fact-value"><a href="combo-kitchen-privacy.html" style="color: var(--text); border-bottom: 1px solid var(--border);">View policy</a></span>
+        <span class="fact-label">Result</span>
+        <span class="fact-value">Clearer, sourced articles + a publishing workflow the team can sustain</span>
         </div>
 
     </div>
@@ -379,7 +413,6 @@
   </section>
 
   <footer>
-    <p class="disclaimer">Combo Kitchen is an unofficial, fan-made reference guide. It is not affiliated with, endorsed by, or sponsored by NetherRealm Studios, Capcom, Bandai Namco, Arc System Works, or SNK. Mortal Kombat 1, Street Fighter 6, Tekken 8, Guilty Gear Strive, Dragon Ball FighterZ, Fatal Fury: City of the Wolves, and all related character names, logos, and trademarks are the property of their respective owners.</p>
     <p>© Renenet · 2026</p>
   </footer>
 
